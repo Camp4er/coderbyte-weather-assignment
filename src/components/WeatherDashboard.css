@@ -8,65 +8,46 @@
     min-height: 100vh;
   }
   
-  .search-container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
-  }
-  
-  #citySearch {
-    width: 100%;
-    padding: 10px 15px;
+  input {
+    padding: 12px 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 250px; /* Adjust width for better UI */
+    box-shadow: none;
+    transition: border-color 0.3s ease;
   }
   
-  #searchButton {
-    margin-top: 10px;
-    width: 100%;
+  input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  
+  button {
     padding: 10px 15px;
+    border: none;
     background-color: #007bff;
     color: white;
-    border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
+    margin: 5px;
   }
   
-  #searchButton:hover {
+  button:hover {
     background-color: #0056b3;
   }
   
-  .dropdown {
-    position: absolute;
-    top: 45px;
-    left: 0;
-    width: 100%;
-    max-height: 150px;
-    overflow-y: auto;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+  /* Reset button specific styles */
+  button:nth-child(2) {
+    background-color: #dc3545;
   }
   
-  .dropdown li {
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.2s;
+  button:nth-child(2):hover {
+    background-color: #c82333;
   }
   
-  .dropdown li:hover {
-    background-color: #f0f0f0;
-  }
-  
-  #weatherData {
-    text-align: center;
-    font-size: 18px;
-  }
   
   .weather-info {
     margin-top: 20px;
@@ -75,25 +56,38 @@
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
-
   
-
-
-
-
-
-  .dropdown {
-    position: absolute; /* Ensures dropdown is positioned relative to the container */
-    top: 45px; /* Adjust according to your input height */
-    left: 0;
-    width: 100%;
-    max-height: 150px;
-    overflow-y: auto;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensure it appears on top */
-    display: block; /* Ensure it's visible */
+  .searched-cities {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
+  
+  .city-button {
+    padding: 8px 12px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .city-button:hover {
+    background-color: #495057;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #ff4d4d;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .loading-spinner {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #007bff;
+  }
+  
   
