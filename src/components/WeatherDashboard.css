@@ -1,11 +1,13 @@
 .weather-dashboard {
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #f4f4f4;
-    min-height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   input {
@@ -13,8 +15,9 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     margin-bottom: 10px;
-    width: 250px; /* Adjust width for better UI */
-    box-shadow: none;
+    width: 80%;
+    max-width: 300px;
+    box-sizing: border-box;
     transition: border-color 0.3s ease;
   }
   
@@ -24,7 +27,6 @@
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   }
   
-  
   button {
     padding: 10px 15px;
     border: none;
@@ -33,13 +35,13 @@
     border-radius: 5px;
     cursor: pointer;
     margin: 5px;
+    transition: background-color 0.3s;
   }
   
   button:hover {
     background-color: #0056b3;
   }
   
-  /* Reset button specific styles */
   button:nth-child(2) {
     background-color: #dc3545;
   }
@@ -48,46 +50,65 @@
     background-color: #c82333;
   }
   
-  
-  .weather-info {
-    margin-top: 20px;
-    background: #fff;
-    padding: 15px 20px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .searched-cities {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .city-button {
-    padding: 8px 12px;
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .city-button:hover {
-    background-color: #495057;
-  }
-  
-  /* Error message styling */
-  .error-message {
-    color: #ff4d4d;
-    font-size: 16px;
-    margin-top: 15px;
-  }
-
   .loading-spinner {
     margin-top: 20px;
     font-size: 16px;
     color: #007bff;
   }
   
+  .weather-info {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .error-message {
+    margin-top: 20px;
+    color: #dc3545;
+    font-weight: bold;
+  }
+  
+  .searched-cities {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .city-button {
+    padding: 8px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #007bff;
+    color: #cae4ff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .city-button:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  @media (max-width: 600px) {
+    .weather-dashboard {
+      padding: 15px;
+    }
+  
+    input {
+      width: 100%;
+    }
+  
+    button {
+      width: 100%;
+      margin: 5px 0;
+    }
+  
+    .weather-info {
+      width: 100%;
+    }
+  }
   
